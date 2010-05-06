@@ -19,7 +19,7 @@ class ActiveRecord::Base
           :subject  => self,
           :action   => action.to_s,
           # record changed attributes but only for updates
-          :changes  => (action == :update ? (self.changes.inspect rescue nil) : nil)
+          :changed_attributes  => (action == :update ? (self.changes.inspect rescue nil) : nil)
         )
       end
       send("after_#{action}",method) if respond_to?("after_#{action}")

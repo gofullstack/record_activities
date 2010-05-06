@@ -6,7 +6,7 @@ class AddActivities < ActiveRecord::Migration
       t.string :subject_type, :null=>false
       t.string :action, :null=>false
       t.timestamp :created_at, :null=>false
-      t.string :changes
+      t.string :changed_attributes
     end
   end
 
